@@ -6,9 +6,9 @@
  author: soren bouma 4/4/2016
  
  to control the arduino, just type a sequence of characters into the console
- >a turns LED off
- >b turns LED on
- >typing a number n will cause a delay of n seconds before the next command character is read
+ -a turns LED off
+ -b turns LED on
+ -typing a number n will cause a delay of n seconds before the next command character is read
  for example a1b1a1b1a1b1a1b1 will cause the light to flash on and off
  POTENTIAL ISSUES:
  >doesn't accept delays any more precise than 1 second - but this is easy to fix
