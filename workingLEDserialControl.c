@@ -28,6 +28,11 @@ int cPin=10;
 
 void setup(){
   Serial.begin(9600);
+  // print instructions to serial
+  Serial.println("Welcome! Send a,b,c to turn LEDs on, x,y,z to turn them off");
+  Serial.println("sending a sequence of characters executes commands in that order, \n eg sending 'axaxax' flashes red LED");
+  Serial.println("sending a number n will make arduino delay by n seconds \n eg: a1x1a1x1.. flashes LED with period 1 second");
+  Serial.println("sending o turns everything on, s shuts everything down");
   pinMode(aPin,OUTPUT);
   pinMode(bPin,OUTPUT);
   pinMode(cPin,OUTPUT);
@@ -75,6 +80,24 @@ void loop(){
       Serial.println("delaying by this many seconds: ");
       Serial.println(ser-48);
       delay((ser-48)*1000);
+    }
+     if (ser == 115) {
+      // if user types s, turn everything off
+      Serial.println("turning everything off");
+      Serial.println(ser-48);
+      digitalWrite(aPin,LOW);
+      digitalWrite(bPin,LOW);
+      digitalWrite(cPin,LOW);
+
+    }
+     if (ser == 111) {
+      // if user types o, turn everything on
+      Serial.println("turning everything on");
+      Serial.println(ser-48);
+      digitalWrite(aPin,HIGH);
+      digitalWrite(bPin,HIGH);
+      digitalWrite(cPin,HIGH);
+
     }
   }
 }
