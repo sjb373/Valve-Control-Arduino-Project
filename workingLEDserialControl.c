@@ -108,7 +108,7 @@ void loop(){
       // if user types a number 0-9, delay for that many seconds before executing next command
       Serial.println("delaying by this many seconds: ");
       Serial.println(ser-48);
-      delay((ser-48)*1000);
+      delay((ser-48));
       displayState=1;
     }
      if (ser == 115) {
