@@ -20,7 +20,7 @@
  
  Doesn't accept delays any more precise than 1 second - but this is easy to fix
  
- Once a sequence has been typed in, user can't stop it until it is finished - probably harder to fix
+ Once a sequence has been typed in, user can't stop it without restarting the serial - probably harder to fix
  
  Can't accept time delays longer than 9 seconds without user having to type the same number in multiple times
  (eg to get a delay of 90 seconds, you have to type a9999999999b) but this can be easily 
