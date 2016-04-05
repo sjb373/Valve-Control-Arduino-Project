@@ -5,11 +5,13 @@
  author: soren bouma 4/4/2016
  
  to control the arduino, just type a sequence of characters into the console
- >a turns LED off
- >b turns LED on
+ >a turns LED a on, b turns led b on
+ >x turns led a off,y turns b off
+ s shuts down every led
+ o turns on every led
  >typing a number n will cause a delay of n seconds before the next command character is read
 
- for example a1b1a1b1a1b1a1b1 will cause the light to flash on and off
+ for example a1x1a1x1a1x1a1x1 will cause the led a to flash on and off
 
 
 
