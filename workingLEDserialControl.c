@@ -10,12 +10,7 @@
  s shuts down every led
  o turns on every led
  >typing a number n will cause a delay of n seconds before the next command character is read
-
  for example a1x1a1x1a1x1a1x1 will cause the led a to flash on and off
-
-
-
-
  POTENTIAL ISSUES:
  >doesn't accept delays any more precise than 1 second - but this is easy to fix
  >once a sequence has been typed in, user can't stop it until it is finished - probably harder to fix
@@ -77,12 +72,12 @@ void loop(){
       Serial.println("turning LED c(green) off");
       digitalWrite(cPin,LOW);
     }
-    if (ser >= 49 and ser < 57) {
+    //if (ser >= 49 and ser < 57) {
       // if user types a number 0-9, delay for that many seconds before executing next command
-      Serial.println("delaying by this many seconds: ");
-      Serial.println(ser-48);
-      delay((ser-48)*1000);
-    }
+      //Serial.println("delaying by this many seconds: ");
+      //Serial.println(ser-48);
+      //delay((ser-48)*1000);
+    //}
      if (ser == 115) {
       // if user types s, turn everything off
       Serial.println("turning everything off");
