@@ -27,9 +27,13 @@ number n delays by n seconds before sending next command
  
  1) Make sure you have python and pyserial
  2) Upload SerialControlPython.c
+ 
  3) make sure line 45 has a string with the path to the port your arduino is on
+ 
  2) open python shell and type >>execfile('serialInterface.py')
+ 
  3) make a list of command strings, eg l=['o','200','x'] - turns everything on, waits 0.2 seconds, turns led 1 off
+ 
  4) use the send function on the list, eg send(l)
  
  POTENTIAL ISSUES:
