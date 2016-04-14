@@ -17,7 +17,7 @@ number n delays by n seconds before sending next command
 
   for example a1b1a1b1a1b1a1b1 will cause  light 1 to flash on and off
  
- IMPORTANT: you can only delay up to 9 ms when controlling arduino through console. If you want an easy way to type longer delays, run the python interface and use the send() function
+ IMPORTANT: you can only delay up to 9 ms at a time when controlling arduino through console. If you want an easy way to type longer delays, run the python interface and use the send() function
  
 
  
