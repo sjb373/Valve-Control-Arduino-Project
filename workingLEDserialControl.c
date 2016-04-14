@@ -72,12 +72,13 @@ void loop(){
       Serial.println("turning LED c(green) off");
       digitalWrite(cPin,LOW);
     }
-    //if (ser >= 49 and ser < 57) {
+    if (ser >= 49 and ser < 57) {
+       //IMPORTANT: if you are using the python UI, comment this if statement out or delays will last twice as long as you intend
       // if user types a number 0-9, delay for that many seconds before executing next command
-      //Serial.println("delaying by this many seconds: ");
-      //Serial.println(ser-48);
-      //delay((ser-48)*1000);
-    //}
+      Serial.println("delaying by this many seconds: ");
+      Serial.println(ser-48);
+      delay((ser-48)*1000);
+    }
      if (ser == 115) {
       // if user types s, turn everything off
       Serial.println("turning everything off");
