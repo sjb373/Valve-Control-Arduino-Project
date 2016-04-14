@@ -25,7 +25,8 @@ number n delays by n seconds before sending next command
  To control the arduino using the python UI:
  
  
- 1) Make sure you have python and pyserial
+ 1) Make sure you have python and pyserial installed and working
+ 
  2) Upload SerialControlPython.c
  
  3) make sure line 45 has a string with the path to the port your arduino is on
