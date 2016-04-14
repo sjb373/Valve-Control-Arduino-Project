@@ -1,8 +1,6 @@
 # Valve-Control-Arduino-Project
 
- This code allows the user to control 1 of the arduinos output pins from the console, turning it on and off
- and delaying them. 
- 
+ This code allows the user to control pins 8,9 and 10 of an arduino from either the arduino serial monitor or a python interface I made.
 
 TO CONTROL THE ARDUINO FROM THE ARDUINO SERIAL MONITOR
  
