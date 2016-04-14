@@ -1,27 +1,38 @@
 # Valve-Control-Arduino-Project
 
  This code allows the user to control 1 of the arduinos output pins from the console, turning it on and off
- and delaying them.
+ and delaying them. 
  
- author: soren bouma 4/4/2016
+ author: soren bouma
  
- to control the arduino, just type a sequence of characters into the console
+ to control the arduino from arduino serial monitor
  
- a turns LED off
+ 1)Upload workingLEDserialControl.c to the arduino
  
- b turns LED on
+ 2) open the serial monitor and just type a sequence of characters, then press enter
  
- typing a number n will cause a delay of n seconds before the next command character is read
+a/b= valve 1 on/off, b/x =valve 2 on/off, c/z sparks on/off, o/s everythng on/off
+number n delays by n seconds before sending next command
+
+
+  for example a1b1a1b1a1b1a1b1 will cause  light 1 to flash on and off
  
- for example a1b1a1b1a1b1a1b1 will cause the light to flash on and off
+ IMPORTANT: you can only delay up to 9 ms when controlling arduino through console. If you want an easy way to type longer delays, run the python interface and use the send() function
  
+
+ 
+ 
+ To control the arduino using the python UI:
+ 
+ 
+ 1) Make sure you have python and pyserial
+ 2) Upload SerialControlPython.c
+ 3) make sure line 45 has a string with the path to the port your arduino is on
+ 2) open python shell and type >>execfile('serialInterface.py')
+ 3) make a list of command strings, eg l=['o','200','x'] - turns everything on, waits 0.2 seconds, turns led 1 off
+ 4) use the send function on the list, eg send(l)
  
  POTENTIAL ISSUES:
  
- Doesn't accept delays any more precise than 1 second - but this is easy to fix
- 
- Once a sequence has been typed in, user can't stop it without restarting the serial - probably harder to fix
- 
- Can't accept time delays longer than 9 seconds without user having to type the same number in multiple times
- (eg to get a delay of 90 seconds, you have to type a9999999999b) but this can be easily 
- fixed with a function in the python ui i will eventually make
+Everything works on my setup. I'm not sure what the latency/precision is, my reaction times aren't fast enough to test it.
+Make sure line 45 of the python interface uses the same serial path as your arduino
