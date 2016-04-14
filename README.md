@@ -3,9 +3,8 @@
  This code allows the user to control 1 of the arduinos output pins from the console, turning it on and off
  and delaying them. 
  
- author: soren bouma
- 
- to control the arduino from arduino serial monitor
+
+TO CONTROL THE ARDUINO FROM THE ARDUINO SERIAL MONITOR
  
  1)Upload workingLEDserialControl.c to the arduino
  
@@ -22,7 +21,7 @@ number n delays by n seconds before sending next command
 
  
  
- To control the arduino using the python UI:
+TO CONTROL ARDUINO USING THE PYTHON UI:
  
  
  1) Make sure you have python and pyserial installed and working
